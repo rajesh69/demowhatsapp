@@ -9,7 +9,7 @@ const VERIFY_TOKEN = process.env.WHATSAPP_VERIFY_TOKEN || "my_verify_token";
  * Webhook Verification
  * Meta sends a GET request when you configure the webhook.
  */
-app.get("/webhook", (req, res) => {
+app.get("/webhookget", (req, res) => {
   const mode = req.query["hub.mode"];
   const token = req.query["hub.verify_token"];
   const challenge = req.query["hub.challenge"];
@@ -25,7 +25,7 @@ app.get("/webhook", (req, res) => {
 /**
  * Receive WhatsApp Events
  */
-app.post("/webhook", (req, res) => {
+app.post("/webhookpost", (req, res) => {
   const body = req.body;
 
   console.log(
