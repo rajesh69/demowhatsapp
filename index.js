@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-const VERIFY_TOKEN = process.env.WHATSAPP_VERIFY_TOKEN || "my_verify_token";
+const VERIFY_TOKEN = "eskro_aucurx_16062026";
 
 /**
  * Webhook Verification
